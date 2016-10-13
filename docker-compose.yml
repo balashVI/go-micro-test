@@ -1,0 +1,19 @@
+consul:
+  image: progrium/consul:latest
+  command: -server -bootstrap -rejoin
+  ports:
+    - "6379:6379"
+service:
+  build: ./service
+  environment:
+    - MICRO_REGISTRY_ADDRESS=consul:8500
+  links:
+    - consul
+  command: /go/bin/service
+service-client:
+  build: ./service-client
+  environment:
+      - MICRO_REGISTRY_ADDRESS=consul:8500
+  links:
+    - consul
+  command: /go/bin/service-client
