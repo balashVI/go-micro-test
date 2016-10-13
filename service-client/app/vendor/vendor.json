@@ -1,0 +1,237 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "i0/O++4RHTctJVb3GUrG3HH12FI=",
+			"path": "github.com/balashVI/go-micro-test/proto",
+			"revision": "5d48f74b037b181863984ec975a5938a1db1832a",
+			"revisionTime": "2016-10-13T20:41:15Z"
+		},
+		{
+			"checksumSHA1": "SVXOQdpDBh0ihdZ5aIflgdA+Rpw=",
+			"path": "github.com/golang/protobuf/proto",
+			"revision": "98fa357170587e470c5f27d3c3ea0947b71eb455",
+			"revisionTime": "2016-10-12T20:53:35Z"
+		},
+		{
+			"checksumSHA1": "gPi7fIH7BzYjebIeXKn4vWO+bfI=",
+			"path": "github.com/hashicorp/consul/api",
+			"revision": "9fc0c0ede2299bc290c0d5ab4d316788b605a197",
+			"revisionTime": "2016-09-30T14:51:30Z"
+		},
+		{
+			"checksumSHA1": "q89jRx07XZrhCUmir1lp94/cD2k=",
+			"path": "github.com/hashicorp/consul/watch",
+			"revision": "9fc0c0ede2299bc290c0d5ab4d316788b605a197",
+			"revisionTime": "2016-09-30T14:51:30Z"
+		},
+		{
+			"checksumSHA1": "Uzyon2091lmwacNsl1hCytjhHtg=",
+			"origin": "github.com/hashicorp/consul/vendor/github.com/hashicorp/go-cleanhttp",
+			"path": "github.com/hashicorp/go-cleanhttp",
+			"revision": "9fc0c0ede2299bc290c0d5ab4d316788b605a197",
+			"revisionTime": "2016-09-30T14:51:30Z"
+		},
+		{
+			"checksumSHA1": "E3Xcanc9ouQwL+CZGOUyA/+giLg=",
+			"origin": "github.com/hashicorp/consul/vendor/github.com/hashicorp/serf/coordinate",
+			"path": "github.com/hashicorp/serf/coordinate",
+			"revision": "9fc0c0ede2299bc290c0d5ab4d316788b605a197",
+			"revisionTime": "2016-09-30T14:51:30Z"
+		},
+		{
+			"checksumSHA1": "QzajnjIq3OjjZ9SpXgbkHaN5Lzw=",
+			"path": "github.com/micro/cli",
+			"revision": "3d2263bb092286dde294a31049c92665f8373820",
+			"revisionTime": "2016-04-06T21:54:05Z"
+		},
+		{
+			"checksumSHA1": "EcdLuAu4URM+8KpErkxf+i9A4GI=",
+			"path": "github.com/micro/go-micro",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "pkVCduV+OXST/+hsyLUzE6pzoLo=",
+			"path": "github.com/micro/go-micro/broker",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "fjjNX2d0LbvbPn3AoT8p457z2fQ=",
+			"path": "github.com/micro/go-micro/broker/http",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "KvlKEy9NMsed8k++4XbucQuPCaA=",
+			"path": "github.com/micro/go-micro/client",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "3756mncDQfMSwEF3PCsLo2tCcw0=",
+			"path": "github.com/micro/go-micro/cmd",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "usH34cKy06SAHuzKmKT8ZCI59iQ=",
+			"path": "github.com/micro/go-micro/codec",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "B99yLQy4wZilorNrj/dE6qhyEcQ=",
+			"path": "github.com/micro/go-micro/codec/jsonrpc",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "W1KgJVUwTsaZSWyijHtymH/bHMg=",
+			"path": "github.com/micro/go-micro/codec/protorpc",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "6to341RzkuRI1PnV2GBcIfxhn/I=",
+			"path": "github.com/micro/go-micro/errors",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "bnY5nYb3MRmS+J1g+jZK+9IaOWw=",
+			"path": "github.com/micro/go-micro/metadata",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "0oHWCKrlzv0bNnd5kOaYrM3dLvQ=",
+			"path": "github.com/micro/go-micro/registry",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "G/2siFKb6sYxurXIL3NNMJ1EwDw=",
+			"path": "github.com/micro/go-micro/registry/consul",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "gcutDxy0PIDb8l+hj/lecbE4udU=",
+			"path": "github.com/micro/go-micro/registry/mdns",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "3UrbgELhwjySULO0OLLVRFHbT60=",
+			"path": "github.com/micro/go-micro/selector",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "hZRfC5zR2vmJyFmS2ObmY+qRh94=",
+			"path": "github.com/micro/go-micro/selector/cache",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "tssUnv1Daxvag+eU2h+/9jZdCf0=",
+			"path": "github.com/micro/go-micro/server",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "HgAJqkhmlyKZan/gujSfc6Uf4ZE=",
+			"path": "github.com/micro/go-micro/server/debug",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "zceg/OLn4J/hZ2ZoOVziZM5li3E=",
+			"path": "github.com/micro/go-micro/server/debug/proto",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "/oS2qnuWeBrb9Rvrn1Ybfpb9lZk=",
+			"path": "github.com/micro/go-micro/transport",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "ihpOfolTf9PYaxIk83rN8VZfN58=",
+			"path": "github.com/micro/go-micro/transport/http",
+			"revision": "cfbcf2efbeb404451561411070fec598f2081b45",
+			"revisionTime": "2016-10-04T16:34:45Z"
+		},
+		{
+			"checksumSHA1": "qS3bEJV31KBLH1obcGNDM8MT7Ck=",
+			"path": "github.com/micro/mdns",
+			"revision": "cdf30746f9f70dc7a366d3d885792a092fd83102",
+			"revisionTime": "2016-09-29T16:56:50Z"
+		},
+		{
+			"checksumSHA1": "tLWJ2LU/PamOwYuF7i2sDsk5vZA=",
+			"path": "github.com/micro/misc/lib/tls",
+			"revision": "677e2a0beb40a3dd7418548fe0cdc661e2922859",
+			"revisionTime": "2016-06-05T16:03:24Z"
+		},
+		{
+			"checksumSHA1": "upBnUT7fVdN92WVqstLBFunMpLc=",
+			"path": "github.com/miekg/dns",
+			"revision": "b96e5025a30182bdc85b3bdf971a8c9f785c0c50",
+			"revisionTime": "2016-10-05T08:08:39Z"
+		},
+		{
+			"checksumSHA1": "Sh9gSysXXXM1RDCFjI/hamW1FNY=",
+			"path": "github.com/mitchellh/hashstructure",
+			"revision": "b098c52ef6beab8cd82bc4a32422cf54b890e8fa",
+			"revisionTime": "2016-06-09T17:09:29Z"
+		},
+		{
+			"checksumSHA1": "mhvIMH8oAtOiEyg37zWKmgb+6v4=",
+			"path": "github.com/pborman/uuid",
+			"revision": "b984ec7fa9ff9e428bd0cf0abf429384dfbe3e37",
+			"revisionTime": "2016-08-24T21:06:00Z"
+		},
+		{
+			"checksumSHA1": "tK8eFmQ0JeKpR3P0TjiGobzlIh0=",
+			"path": "golang.org/x/net/bpf",
+			"revision": "ffe101cce3477a6c6d8f0754d103bb0a84ec1266",
+			"revisionTime": "2016-10-03T09:22:05Z"
+		},
+		{
+			"checksumSHA1": "9jjO5GjLa0XF/nfWihF02RoH4qc=",
+			"path": "golang.org/x/net/context",
+			"revision": "ffe101cce3477a6c6d8f0754d103bb0a84ec1266",
+			"revisionTime": "2016-10-03T09:22:05Z"
+		},
+		{
+			"checksumSHA1": "yRuyntx9a59ugMi5NlN4ST0XRcI=",
+			"path": "golang.org/x/net/internal/iana",
+			"revision": "ffe101cce3477a6c6d8f0754d103bb0a84ec1266",
+			"revisionTime": "2016-10-03T09:22:05Z"
+		},
+		{
+			"checksumSHA1": "LVY0kRV5iwxDS3XQaBWxdzPemyc=",
+			"path": "golang.org/x/net/internal/netreflect",
+			"revision": "ffe101cce3477a6c6d8f0754d103bb0a84ec1266",
+			"revisionTime": "2016-10-03T09:22:05Z"
+		},
+		{
+			"checksumSHA1": "nWx03QvqzZFT/4ILFd8ErZZXIxk=",
+			"path": "golang.org/x/net/ipv4",
+			"revision": "ffe101cce3477a6c6d8f0754d103bb0a84ec1266",
+			"revisionTime": "2016-10-03T09:22:05Z"
+		},
+		{
+			"checksumSHA1": "DIs7WCCFKZYaIEGur6BZKyWw/JI=",
+			"path": "golang.org/x/net/ipv6",
+			"revision": "ffe101cce3477a6c6d8f0754d103bb0a84ec1266",
+			"revisionTime": "2016-10-03T09:22:05Z"
+		}
+	],
+	"rootPath": "github.com/balashVI/go-micro-test/service-client/app"
+}

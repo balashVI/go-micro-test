@@ -3,14 +3,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/micro/go-micro"
 	"github.com/balashVI/go-micro-test/proto"
+	"github.com/micro/go-micro"
 	"golang.org/x/net/context"
 )
 
 type HealthCheck struct{}
 
-func (hc HealthCheck) Ping(ctx context.Context, req *proto.PingRequest, rsp *proto.PingResponse) error{
+func (hc HealthCheck) Ping(ctx context.Context, req *proto.PingRequest, rsp *proto.PingResponse) error {
 	rsp.Message = "Pong"
 	return nil
 }
