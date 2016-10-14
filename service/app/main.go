@@ -4,21 +4,14 @@ import (
 	"fmt"
 
 	"github.com/balashVI/go-micro-test/proto"
+	"github.com/balashVI/go-micro-test/service/app/services"
 	"github.com/micro/go-micro"
-	"golang.org/x/net/context"
 )
-
-type HealthCheck struct{}
-
-func (hc HealthCheck) Ping(ctx context.Context, req *proto.PingRequest, rsp *proto.PingResponse) error {
-	rsp.Message = "Pong"
-	return nil
-}
 
 func main() {
 	// Create a new service
 	service := micro.NewService(
-		micro.Name("go.micro-test.healthcheck"),
+		micro.Name("go.micro-test.todo"),
 		micro.Version("latest"),
 	)
 
@@ -26,7 +19,7 @@ func main() {
 	service.Init()
 
 	// Register handler
-	proto.RegisterHealthCheckHandler(service.Server(), new(HealthCheck))
+	proto.RegisterToDoServiceHandler(service.Server(), new(services.ToDoService))
 
 	// Run the server
 	if err := service.Run(); err != nil {
