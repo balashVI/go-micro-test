@@ -1,23 +1,21 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/balashVI/go-micro-test/proto"
+	"github.com/balashVI/go-micro-test/service-client/app/handlers"
+	"github.com/kataras/iris"
 	"github.com/micro/go-micro"
-	"golang.org/x/net/context"
-	"strconv"
-	"time"
 )
 
 type App struct {
 	ToDoServiceClient proto.ToDoServiceClient
+
+	ToDoHandler handlers.ToDoHandlerInterface
 }
 
 var app = new(App)
 
 func init() {
-
 	service := micro.NewService(
 		micro.Name("go.micro-test.todo"),
 		micro.Version("latest"),
@@ -25,27 +23,20 @@ func init() {
 	service.Init()
 
 	app.ToDoServiceClient = proto.NewToDoServiceClient("go.micro-test.todo", service.Client())
+
+	app.ToDoHandler = handlers.ToDoHandler{ToDoServiceClient: app.ToDoServiceClient}
 }
 
 func main() {
-	for {
-		time.Sleep(3 * time.Second)
-		rsp, err := app.ToDoServiceClient.Ping(context.TODO(), new(proto.Empty))
+	iris.Get("/ping", app.ToDoHandler.Ping)
 
-		if err != nil {
-			fmt.Println(err)
-		} else {
-			fmt.Println(rsp.Message)
+	iris.Get("/list", app.ToDoHandler.List)
 
-			listResp, _ := app.ToDoServiceClient.List(context.TODO(), new(proto.ListRequest))
-			fmt.Println(listResp.Todos)
-
-			newToDo := proto.ToDo{
-				Id:      int64(len(listResp.Todos)),
-				Message: "ToDo #" + strconv.Itoa(len(listResp.Todos)),
-				Done:    false,
-			}
-			app.ToDoServiceClient.Add(context.TODO(), &newToDo)
-		}
+	todo := iris.Party("/todo")
+	{
+		todo.Get("/:id", app.ToDoHandler.Get)
+		todo.Put("/", app.ToDoHandler.Add)
 	}
+
+	iris.Listen(":8080")
 }

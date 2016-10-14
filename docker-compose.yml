@@ -17,3 +17,5 @@ service-client:
   links:
     - consul
   command: /go/bin/service-client
+  ports:
+    - "8080:8080"
