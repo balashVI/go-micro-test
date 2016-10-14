@@ -3,10 +3,10 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "ixsuKo0Ot7QMZ9qKxeil99geQ88=",
+			"checksumSHA1": "3IuwL9n6ZpBozfG+XeVaW/kiiwQ=",
 			"path": "github.com/balashVI/go-micro-test/proto",
-			"revision": "f1dead1035dc8ab410587f003353eb4962a6dbc5",
-			"revisionTime": "2016-10-14T12:55:57Z"
+			"revision": "9ca13890126c20e7a2cce26d3a54162cca22e96e",
+			"revisionTime": "2016-10-14T18:31:10Z"
 		},
 		{
 			"checksumSHA1": "SVXOQdpDBh0ihdZ5aIflgdA+Rpw=",
