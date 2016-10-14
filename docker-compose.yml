@@ -2,7 +2,8 @@ consul:
   image: progrium/consul:latest
   command: -server -bootstrap -rejoin
   ports:
-    - "6379:6379"
+    - "8500:8500"
+
 service:
   build: ./service
   environment:
@@ -10,6 +11,7 @@ service:
   links:
     - consul
   command: /go/bin/service
+
 service-client:
   build: ./service-client
   environment:
@@ -19,3 +21,14 @@ service-client:
   command: /go/bin/service-client
   ports:
     - "8080:8080"
+
+sidecar:
+  build: ./sidecar
+  environment:
+    - MICRO_REGISTRY_ADDRESS=consul:8500
+  links:
+    - consul
+  command: micro --enable_stats sidecar
+  ports:
+    - "8081:8081"
+
