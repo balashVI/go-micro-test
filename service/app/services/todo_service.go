@@ -57,7 +57,7 @@ func (s *ToDoService) Get(ctx context.Context, req *proto.GetRequest, todo *prot
 	return nil
 }
 
-func (s *ToDoService) Add(ctx context.Context, newToDo *proto.ToDo, resToDo *proto.ToDo) error {
+func (s *ToDoService) Add(ctx context.Context, newToDo *proto.ToDo, _ *proto.Empty) error {
 	log.Println("Add", newToDo)
 
 	if len(newToDo.Message) == 0 {
@@ -66,12 +66,11 @@ func (s *ToDoService) Add(ctx context.Context, newToDo *proto.ToDo, resToDo *pro
 
 	newToDo.Id = int64(len(s.toDos))
 	s.toDos = append(s.toDos, newToDo)
-	*resToDo = *newToDo
 
 	return nil
 }
 
-func (s *ToDoService) Update(ctx context.Context, updateToDo *proto.ToDo, resToDo *proto.ToDo) error {
+func (s *ToDoService) Update(ctx context.Context, updateToDo *proto.ToDo, _ *proto.Empty) error {
 	log.Println("Update", updateToDo)
 
 	index := -1
@@ -86,12 +85,10 @@ func (s *ToDoService) Update(ctx context.Context, updateToDo *proto.ToDo, resToD
 
 	if index == -1 {
 		return errors.New("Not found")
+	} else {
+		*s.toDos[index] = *updateToDo
+		return nil
 	}
-
-	*s.toDos[index] = *updateToDo
-	*resToDo = *updateToDo
-
-	return nil
 }
 
 func (s *ToDoService) Delete(ctx context.Context, req *proto.DeleteRequest, _ *proto.Empty) error {
