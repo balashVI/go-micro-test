@@ -1,4 +1,4 @@
-package services
+package handlers
 
 import (
 	"errors"
@@ -8,18 +8,18 @@ import (
 )
 
 // TODO: add store
-type ToDoService struct {
+type ToDoHandler struct {
 	toDos []*proto.ToDo
 }
 
-func (_ ToDoService) Ping(ctx context.Context, _ *proto.Empty, rsp *proto.PingResponse) error {
+func (_ ToDoHandler) Ping(ctx context.Context, _ *proto.Empty, rsp *proto.PingResponse) error {
 	log.Println("Ping")
 
 	rsp.Message = "Pong"
 	return nil
 }
 
-func (s *ToDoService) List(ctx context.Context, req *proto.ListRequest, rsp *proto.ListResponse) error {
+func (s *ToDoHandler) List(ctx context.Context, req *proto.ListRequest, rsp *proto.ListResponse) error {
 	log.Println("List", req)
 
 	if req.Count > int32(0) {
@@ -37,7 +37,7 @@ func (s *ToDoService) List(ctx context.Context, req *proto.ListRequest, rsp *pro
 	return nil
 }
 
-func (s *ToDoService) Get(ctx context.Context, req *proto.GetRequest, todo *proto.ToDo) error {
+func (s *ToDoHandler) Get(ctx context.Context, req *proto.GetRequest, todo *proto.ToDo) error {
 	log.Println("Get", req)
 
 	index := -1
@@ -57,7 +57,7 @@ func (s *ToDoService) Get(ctx context.Context, req *proto.GetRequest, todo *prot
 	return nil
 }
 
-func (s *ToDoService) Add(ctx context.Context, newToDo *proto.ToDo, _ *proto.Empty) error {
+func (s *ToDoHandler) Add(ctx context.Context, newToDo *proto.ToDo, _ *proto.Empty) error {
 	log.Println("Add", newToDo)
 
 	if len(newToDo.Message) == 0 {
@@ -70,7 +70,7 @@ func (s *ToDoService) Add(ctx context.Context, newToDo *proto.ToDo, _ *proto.Emp
 	return nil
 }
 
-func (s *ToDoService) Update(ctx context.Context, updateToDo *proto.ToDo, _ *proto.Empty) error {
+func (s *ToDoHandler) Update(ctx context.Context, updateToDo *proto.ToDo, _ *proto.Empty) error {
 	log.Println("Update", updateToDo)
 
 	index := -1
@@ -91,7 +91,7 @@ func (s *ToDoService) Update(ctx context.Context, updateToDo *proto.ToDo, _ *pro
 	}
 }
 
-func (s *ToDoService) Delete(ctx context.Context, req *proto.DeleteRequest, _ *proto.Empty) error {
+func (s *ToDoHandler) Delete(ctx context.Context, req *proto.DeleteRequest, _ *proto.Empty) error {
 	log.Println("Delete", req)
 
 	index := -1
